@@ -1,13 +1,10 @@
 # Интернет - магазин пекарни
 
 ### Как запустить?
-```sh
-$ cd client
-$ npm install
-$ ng serve --open
-$ cd ../server
-$ json-server --watch db.json
-```
+
+в папке client - npm i, ng serve
+ В папке server - json-server --watch db.json
+
 
 ### Данные для входа
 
