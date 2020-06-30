@@ -1,0 +1,332 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "password": "Admin000000!",
+      "user_type_id": 1,
+      "email": "Admin@mail.ru",
+      "name": "Колезнева",
+      "surname": "Надежда",
+      "creation_date": "2020-09-10T18:39:21.033Z"
+    },
+    {
+      "id": 2,
+      "password": "Operator000000!",
+      "user_type_id": 2,
+      "email": "Operator@mail.ru",
+      "name": "Колезнева",
+      "surname": "Надежда",
+      "phone_number": "+79044757569",
+      "creation_date": "2020-09-11T21:43:10.033Z"
+    },
+    {
+      "id": 3,
+      "password": "Client000000!",
+      "user_type_id": 3,
+      "email": "Client@mail.ru",
+      "name": "Иванов",
+      "surname": "Иван",
+      "phone_number": "+79044757569",
+      "creation_date": "2020-04-01T13:51:59.066Z"
+    },
+    {
+      "id": 4,
+      "user_type_id": 3,
+      "name": "Надежда",
+      "surname": "Колезнева",
+      "email": "nvkolezneva@gmail.com",
+      "phone_number": "89044757569",
+      "creation_date": "2020-06-28T13:29:56.339Z"
+    }
+  ],
+  "user_types": [
+    {
+      "id": 1,
+      "title": "admin"
+    },
+    {
+      "id": 2,
+      "title": "operator"
+    },
+    {
+      "id": 3,
+      "title": "customer"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "image": "https://i.pinimg.com/564x/07/7b/02/077b025ba71846fd834b17c7aa9023fe.jpg",
+      "name": "Безглютеновый лимонный торт",
+      "price": 40000
+    },
+    {
+      "id": "2",
+      "image": "https://i.pinimg.com/564x/e1/0f/0c/e10f0cffd247726be3881dd891e2a6a6.jpg",
+      "name": "Печенье Нью-Йорк",
+      "price": "150"
+    },
+    {
+      "id": "3",
+      "image": "https://i.pinimg.com/564x/af/51/63/af51637462da334d4412b03da8c96a94.jpg",
+      "name": "Брауни",
+      "price": "400"
+    },
+    {
+      "id": "4",
+      "image": "https://i.pinimg.com/564x/30/c8/c1/30c8c1e2067ab81b43abe51f935fb035.jpg",
+      "name": "Хлеб ржаной",
+      "price": "70"
+    },
+    {
+      "id": "5",
+      "image": "https://i.pinimg.com/564x/ed/33/e3/ed33e3a2e22465793969852c8158321d.jpg",
+      "name": "Вегетарианские пончики",
+      "price": "500"
+    },
+    {
+      "id": "6",
+      "image": "https://i.pinimg.com/564x/79/f6/e9/79f6e9a78b39cd2aa74a7ff2ac938302.jpg",
+      "name": "Шоколадный торт",
+      "price": "3000"
+    },
+    {
+      "id": "7",
+      "image": "https://i.pinimg.com/564x/77/1a/a8/771aa830d994c03dbef860f43d19bcc3.jpg",
+      "name": "Миндальные кексы",
+      "price": "400"
+    },
+    {
+      "id": "8",
+      "image": "https://i.pinimg.com/564x/bf/75/cb/bf75cbec94c22f9fb6a336c976dabd35.jpg",
+      "name": "Макарунс",
+      "price": "300"
+    },
+    {
+      "id": "9",
+      "image": "https://i.pinimg.com/564x/d2/29/6a/d2296aaa87d4afd727a38fbe40e80a2a.jpg",
+      "name": "Круассаны",
+      "price": "200"
+    },
+    {
+      "id": "10",
+      "image": "https://i.pinimg.com/564x/af/51/63/af51637462da334d4412b03da8c96a94.jpg",
+      "name": "Брауни",
+      "price": "400"
+    }
+  ],
+  "order_statuses": [
+    {
+      "id": 1,
+      "title": "На рассмотрении"
+    },
+    {
+      "id": 2,
+      "title": "В работе"
+    },
+    {
+      "id": 3,
+      "title": "Отменен"
+    },
+    {
+      "id": 4,
+      "title": "Завершен"
+    }
+  ],
+  "rules": [
+    {
+      "id": 1,
+      "title": "Доступ к административной панели"
+    },
+    {
+      "id": 2,
+      "title": "Доступ к личному кабинету"
+    },
+    {
+      "id": 3,
+      "title": "Создание пользователей административной роли"
+    },
+    {
+      "id": 4,
+      "title": "Редактирование информации на сайте"
+    },
+    {
+      "id": 5,
+      "title": "Просмотр заказов всех пользователей"
+    },
+    {
+      "id": 6,
+      "title": "Изменение статуса заказа"
+    },
+    {
+      "id": 7,
+      "title": "Отправка уведомлений заказчику"
+    },
+    {
+      "id": 8,
+      "title": "Просмотр и редактирование правил"
+    },
+    {
+      "id": 9,
+      "title": "Просмотр пользователей"
+    },
+    {
+      "id": 10,
+      "title": "Назначать менеджеров проектов на заказ"
+    }
+  ],
+  "user_type_rules": [
+    {
+      "id": 1,
+      "user_type_id": 1,
+      "rule_id": 1
+    },
+    {
+      "id": 2,
+      "user_type_id": 2,
+      "rule_id": 1
+    },
+    {
+      "id": 3,
+      "user_type_id": 2,
+      "rule_id": 9
+    },
+    {
+      "id": 4,
+      "user_type_id": 2,
+      "rule_id": 5
+    },
+    {
+      "id": 5,
+      "user_type_id": 2,
+      "rule_id": 6
+    },
+    {
+      "id": 7,
+      "user_type_id": 3,
+      "rule_id": 1
+    },
+    {
+      "id": 8,
+      "user_type_id": 3,
+      "rule_id": 5
+    },
+    {
+      "id": 9,
+      "user_type_id": 3,
+      "rule_id": 6
+    },
+    {
+      "id": 10,
+      "user_type_id": 3,
+      "rule_id": 7
+    },
+    {
+      "id": 11,
+      "user_type_id": 4,
+      "rule_id": 2
+    },
+    {
+      "id": 13,
+      "user_type_id": 1,
+      "rule_id": 8
+    },
+    {
+      "id": 19,
+      "user_type_id": 2,
+      "rule_id": 7
+    },
+    {
+      "id": 20,
+      "user_type_id": 1,
+      "rule_id": 5
+    },
+    {
+      "id": 21,
+      "user_type_id": 1,
+      "rule_id": 7
+    },
+    {
+      "id": 22,
+      "user_type_id": 1,
+      "rule_id": 6
+    },
+    {
+      "id": 23,
+      "user_type_id": 1,
+      "rule_id": 10
+    },
+    {
+      "id": 24,
+      "user_type_id": 1,
+      "rule_id": 9
+    },
+    {
+      "id": 25,
+      "user_type_id": 1,
+      "rule_id": 4
+    },
+    {
+      "id": 26,
+      "user_type_id": 1,
+      "rule_id": 3
+    },
+    {
+      "id": 27,
+      "user_type_id": 2,
+      "rule_id": 6
+    },
+    {
+      "id": 28,
+      "user_type_id": 3,
+      "rule_id": 10
+    },
+    {
+      "id": 29,
+      "user_type_id": 3,
+      "rule_id": 9
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "user_id": 4,
+      "order_type_id": null,
+      "description": null,
+      "order_status_id": 1,
+      "manager_id": 2
+    },
+    {
+      "id": 2,
+      "user_id": 4,
+      "order_type_id": null,
+      "description": null,
+      "order_status_id": 1,
+      "manager_id": 2
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "order_type_id": null,
+      "description": null,
+      "order_status_id": 1,
+      "manager_id": 2
+    },
+    {
+      "id": 4,
+      "user_id": 4,
+      "order_type_id": null,
+      "description": null,
+      "order_status_id": 1,
+      "manager_id": 2
+    },
+    {
+      "id": 5,
+      "user_id": 4,
+      "order_type_id": null,
+      "description": null,
+      "order_status_id": 1,
+      "manager_id": 2
+    }
+  ]
+}

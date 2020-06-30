@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div *ngIf="order">
+
+        <h3 class="display-4">Заказ №: {{ order.id }}</h3>
+      <h5>Статус заказа</h5>
+                <form *ngIf="canChangeStatus" class="text-center" [formGroup]="statusChangingForm">
+                    <select class="browser-default custom-select mb-4" formControlName="statusId">
+                        <option *ngFor="let status of statuses" [ngValue]="status.id">{{ status.title }}</option>
+                    </select>
+                    <button mdbBtn class="btn btn-dark" block="true" type="submit" (click)="changeStatus()">Изменить</button>
+                </form>
+
+        <div *ngIf="order.userOwner" style="padding-top: 20px ">
+            <h5>Заказчик</h5>
+                    <app-user-card [user]="customer" class="text-center"></app-user-card>
+
+              <div style="padding-top: 20px ">
+                <h5>Исполнитель</h5>
+                    <app-user-card *ngIf="manager; else elseBlock" [user]="manager" class="text-center"></app-user-card>
+                    <ng-template #elseBlock class="text-center">Исполнитель не выбран </ng-template>
+                    <form *ngIf="canChangeProjectManager" class="text-center" [formGroup]="managerChangingForm">
+                      <select class="browser-default custom-select mb-4" formControlName="managerId">
+                        <option selected [ngValue]="null">Назначить исполнителя</option>
+                        <option *ngFor="let user of managers" [ngValue]="user.id">{{ user.fullName }}</option>
+                      </select>
+                      <button mdbBtn class="btn btn-dark" block="true" type="submit" (click)="changeManager()">Сохранить</button>
+                    </form>
+
+
+              
+            </div>
+        </div>
+
+       
+
+    </div>
+
+</div>

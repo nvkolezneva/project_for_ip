@@ -1,0 +1,49 @@
+<nav class="mb-1 navbar navbar-dark bg-dark">
+    <h1 class="navbar-brand">{{ title }}</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul *ngIf="this.router.url.startsWith('/admin')" class="navbar-nav mr-auto">
+            <li *ngIf="viewingOrders" class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/admin/orders">Заказы</a>
+            </li>
+            <li *ngIf="viewingUsers" class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/admin/users">Пользователи</a>
+            </li>
+            <li *ngIf="viewingRules" class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/admin/items">Товары</a>
+            </li>
+        </ul>
+        <ul *ngIf="!this.router.url.startsWith('/admin')" class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:true }">
+                <a class="nav-link" routerLink="">Главная</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/service">Каталог</a>
+            </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/cart">Корзина</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li *ngIf="user" class="nav-item my-2" style="color: ghostwhite">
+                Приветствую вас, {{ user.email }}
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Авторизация
+                </a>
+                <div style="background: #212121; color: aliceblue"
+                     class="dropdown-menu dropdown-menu-right dropdown-default"
+                     >
+                    <a style="background: #212121; color: aliceblue" *ngIf="user && accountPanelRule" class="dropdown-item" routerLink="/lk">Личный кабинет</a>
+                    <a style="background: #212121; color: aliceblue" *ngIf="user" class="dropdown-item" routerLink="/logout">Выход</a>
+                    <a style="background: #212121; color: aliceblue" *ngIf="!user" class="dropdown-item" routerLink="/login">Войти</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
